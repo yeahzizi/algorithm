@@ -1,5 +1,5 @@
 T = int(input())
-for test_case in range(1, T + 1):
+for tc in range(1, T + 1):
     N = map(int, input().split())
     total = 0
 
@@ -8,5 +8,5 @@ for test_case in range(1, T + 1):
             total += i
 
 
-    print('#%d %d'%(test_case, total))
+    print('#%d %d'%(tc, total))
 
