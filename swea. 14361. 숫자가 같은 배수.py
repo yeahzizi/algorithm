@@ -6,7 +6,7 @@ def perm(depth):
             result = "possible"
             return
 
-    for i in range(len(N)):
+    for i in range(len(N)): #6번 반복해서 6번을 채워줌(check로 체크하고 ans에 답을 넣음)
         if not check[i]:
             check[i] = 1
             ans[depth] = N[i]
