@@ -1,3 +1,6 @@
+#w,r,b가 차례대로 들어가는 모든 경우의 수(blank)와 문제의 입력값을 비교한다.
+#blank와 입력값을 하나하나 비교해서 다를 때 1씩 카운트 한다.
+#비교를 마친 카운트 값을 ans라는 빈 리스트에 append 하고, ans에서 제일 작은 값 출력
 for tc in range(1, int(input())+1):
     N, M = map(int, input().split())
     russia = [list(input()) for _ in range(N)]
