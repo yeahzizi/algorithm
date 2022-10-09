@@ -2,8 +2,6 @@ for tc in range(1, int(input())+1):
     N, M = map(int, input().split())
     russia = [list(input()) for _ in range(N)]
     ans = []
-    min_cnt = 1000000
-
 
     for i in range(1, N-1):
         for j in range(i+1, N):
