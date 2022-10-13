@@ -4,8 +4,8 @@ dc = [0, 1, 0, -1, 1, 1, -1, -1]
 for tc in range(1, int(input()) + 1):
     N, M = map(int, input().split())
     othello = [[0] * (N + 1) for _ in range(N + 1)]
-    othello[N // 2][N // 2], othello[N // 2 + 1][N // 2 + 1] = 1, 1
-    othello[N // 2][N // 2 + 1], othello[N // 2 + 1][N // 2] = 2, 2
+    othello[N // 2][N // 2], othello[N // 2 + 1][N // 2 + 1] = 2, 2
+    othello[N // 2][N // 2 + 1], othello[N // 2 + 1][N // 2] = 1, 1
 
     for m in range(M):
         r, c, color = map(int, input().split())
@@ -23,9 +23,7 @@ for tc in range(1, int(input()) + 1):
                             if othello[nr2][nc2] == color:
                                 for j in range(1, i):
                                     othello[r + dr[dir] * j][c + dc[dir] * j] = color
-                                break
-
-
+                                    continue
 
     cnt1 = 0
     cnt2 = 0
@@ -36,4 +34,3 @@ for tc in range(1, int(input()) + 1):
             if othello[i][j] == 2:
                 cnt2 += 1
     print(f'#{tc} {cnt1} {cnt2}')
-
