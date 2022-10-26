@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-N, M = map(int, input().split())
+N, M = map(int, input().split()) 
 num = list(map(int, input().split()))
 
 for i in range(N):
