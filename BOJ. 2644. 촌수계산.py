@@ -19,8 +19,8 @@ while stack:
             stack.append(destination)
 
 print(visited)
+print(matrix)
 if b not in visited:
     print(-1)
 else:
-    pass
-    #촌수
+    
