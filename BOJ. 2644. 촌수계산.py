@@ -8,19 +8,14 @@ for m in range(m):
     matrix[y][x] = 1
 
 stack = [a]
-visited = []
+visited = [0]*(n+1)
+visited[a] = 1
 
 while stack:
     current = stack.pop()
-    if current not in visited:
-        visited.append(current)
     for destination in range(n+1):
-        if matrix[current][destination] and destination not in visited:
+        if matrix[current][destination] and not visited[destination]:
+            visited[destination] = visited[current] + 1
             stack.append(destination)
 
-print(visited)
-print(matrix)
-if b not in visited:
-    print(-1)
-else:
-    
+print(visited[b]-1)
