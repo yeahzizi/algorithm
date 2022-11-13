@@ -1,20 +1,16 @@
 N, K = map(int, input().split())
-ans = []
+ans = [i for i in range(1, N+1)]
+result = []
 
-for i in range(1, N+1):
-    ans.append(i)
-
-ans = ans * N
-remove_set = []
-visited = []
+idx = 0
 while ans:
-    for i in range(1, len(ans), 3):
-        visited.append(ans[i + 1])
-        remove_set.append(ans[i + 1])
-    ans = [i for i in ans if i not in remove_set]
+    idx += K - 1
+    if idx >= len(ans):
+        idx %= len(ans)
+    a = ans[idx]
+    result.append(a)
+    ans.remove(a)
 
-
-
-print(visited)
+print("<" +", ".join(map(str, result)) + ">")
 
 
