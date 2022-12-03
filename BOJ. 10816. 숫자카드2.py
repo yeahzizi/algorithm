@@ -1,16 +1,14 @@
-import sys
-N = int(sys.stdin.readline())
-arr1 = list(map(int, sys.stdin.readline().split()))
-M = int(sys.stdin.readline())
-arr2 = list(map(int, sys.stdin.readline().split()))
-cnt = {}
+from collections import Counter
 
-for j in arr2:
-    cnt[j] = 0
+N = int(input())
+arr1 = list(map(int, input().split()))
+M = int(input())
+arr2 = list(map(int, input().split()))
 
-for j in arr2:
-    for i in arr1:
-        if j == i:
-            cnt[j] += 1
+counter1=Counter(arr1)
 
-print(*cnt.values())
+for num in arr2:
+    if num in counter1:
+        print(counter1[num], end=' ')
+    else:
+        print(0, end=' ')
