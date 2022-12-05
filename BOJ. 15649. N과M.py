@@ -1,4 +1,7 @@
-N, M = map(int, input().split())
-ans = []
+def nandm()
 
-for i in range
+
+N, M = map(int, input().split())
+visited = []
+
+
