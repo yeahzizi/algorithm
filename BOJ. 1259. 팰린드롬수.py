@@ -1,15 +1,13 @@
 while True:
     num = input()
-
     if num == "0":
         break
 
     pal = ""
-    for i in range(len(num), -1):
-        pal.join(num[i])
-        print(num[i])
+    for i in range(1, len(num)+1):
+        pal += num[-i]
 
-    if pal == num:
+    if num == pal:
         print("yes")
     else:
         print("no")
