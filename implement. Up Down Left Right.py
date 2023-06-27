@@ -2,9 +2,10 @@ N = int(input())
 plans = input().split()
 x, y = 1, 1
 
-dx = [0, 0, -1, 1]
+dx = [0, 0, - 1, 1]
 dy = [-1, 1, 0, 0]
 move_types = ['L', 'R', 'U', 'D']
+
 
 for i in plans:
     for j in range(len(move_types)):
@@ -17,5 +18,3 @@ for i in plans:
     x, y = nx, ny
 
 print(x, y)
-
-
