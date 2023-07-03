@@ -32,3 +32,5 @@ for i in range(n):
             result += 1
 
 print(result) # 정답 출력
+
+# 참고 블로그: https://hgk5722.tistory.com/8
