@@ -12,3 +12,6 @@ def solution(people, limit):
         end -= 1
 
     return len(people) - answer
+
+
+
