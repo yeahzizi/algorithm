@@ -11,3 +11,18 @@ def solution(clothes):
         answer *= (value + 1)
 
     return answer - 1
+
+# version 2
+def solution(clothes):
+    answer = 1
+    combi = dict()
+    n = len(clothes)
+
+    for i, j in clothes:
+        combi.setdefault(j, [])
+        combi[j] += [i]
+
+    for i in combi:
+        answer *= len(combi[i]) + 1
+
+    return answer - 1
