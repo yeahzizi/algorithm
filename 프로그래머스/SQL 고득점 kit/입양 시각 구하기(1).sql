@@ -1,0 +1,7 @@
+// hour 하면 시간이 나옴
+
+SELECT HOUR(DATETIME) HOUR, COUNT(DATETIME) COUNT
+from ANIMAL_OUTS  
+where HOUR(DATETIME) between 9 and 19
+group by HOUR(DATETIME)
+order by HOUR(DATETIME)
