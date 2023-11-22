@@ -27,8 +27,8 @@ def solution(numbers):
         return answer
 
 # version 2
-# 완전히 이해함
-def solution(numbers):
+# 완전히 이해함함
+defsolution(numbers):
     answer = ''
 
     numbers = list(map(str, numbers))
