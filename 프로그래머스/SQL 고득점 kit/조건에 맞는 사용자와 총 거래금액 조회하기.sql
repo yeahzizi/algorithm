@@ -1,0 +1,8 @@
+// 마지막까지 조심!!
+
+SELECT A.WRITER_ID, B.NICKNAME, sum(A.PRICE) TOTAL_SALES
+from USED_GOODS_BOARD A inner join USED_GOODS_USER B on A.WRITER_ID = B.USER_ID
+where A.STATUS = "DONE"
+group by A.WRITER_ID
+having TOTAL_SALES >= 700000
+order by TOTAL_SALES
