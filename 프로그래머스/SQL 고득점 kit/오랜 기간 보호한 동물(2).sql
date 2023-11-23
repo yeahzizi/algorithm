@@ -1,0 +1,6 @@
+// 날짜 차이 구할 때는 datediff!
+
+SELECT A.ANIMAL_ID, A.NAME
+from ANIMAL_INS A join ANIMAL_OUTS B on A.ANIMAL_ID = B.ANIMAL_ID
+order by DATEDIFF(B.DATETIME, A.DATETIME) desc
+LIMIT 2
