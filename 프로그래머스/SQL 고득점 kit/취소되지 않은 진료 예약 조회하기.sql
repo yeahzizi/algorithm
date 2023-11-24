@@ -1,0 +1,6 @@
+// 세개를 조인할 수도 있다!!
+
+SELECT A.APNT_NO, P.PT_NAME, P.PT_NO, A.MCDP_CD, C.DR_NAME, A.APNT_YMD
+from PATIENT P join APPOINTMENT A on P.PT_NO = A.PT_NO join DOCTOR C on A.MDDR_ID = C.DR_ID
+where A.APNT_YMD LIKE '%2022-04-13%' and A.APNT_CNCL_YN = 'N' and A.MCDP_CD = 'CS'
+order by A.APNT_YMD
